@@ -1,5 +1,5 @@
-import { formatZodError } from "../common/format-zod-error";
-import { HttpException } from "../common/http-exception";
+import { formatZodError } from "../common/format-zod-error.js";
+import { HttpException } from "../common/http-exception.js";
 
 export function validationPipe(validationSchema) {
   return (req, res, next) => {

@@ -1,11 +1,9 @@
-import cors from "cors";
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
-import authController from "./auth/auth.controller";
-import { corsOptions } from "./config/cors-options";
-import productsController from "./products/products.controller";
-import usersController from "./users/users.controller";
-import { HttpException } from "./src/common/http-exception";
+import { corsOptions } from "./src/config/cors-options.js";
+import { HttpException } from "./src/common/http-exception.js";
+import eventsController from "./src/events/events.controller.js";
 
 const app = express();
 
@@ -18,9 +16,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/products", productsController);
-app.use("/auth", authController);
-app.use("/users", usersController);
+app.use("/events", eventsController);
 
 app.all("*", (req, res) => {
   throw new HttpException(404, "Not Found");
