@@ -4,6 +4,7 @@ import express from "express";
 import { corsOptions } from "./src/config/cors-options.js";
 import { HttpException } from "./src/common/http-exception.js";
 import eventsController from "./src/events/events.controller.js";
+import announcementsController from "./src/announcements/announcements.controller.js";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/events", eventsController);
+app.use("/announcements", announcementsController);
 
 app.all("*", (req, res) => {
   throw new HttpException(404, "Not Found");
