@@ -41,17 +41,21 @@ const page = () => {
                 size="lg"
                 className="text-lg font-medium"
               >
-                <Link href="#">Upcoming Events</Link>
-              </Button>
-              <Button asChild size="lg" className="text-lg font-normal">
-                <Link href="#">Contact Us</Link>
+                <Link href="/events">Upcoming Events</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="text-lg font-normal sm:flex lg:hidden xl:flex"
+                className="text-lg font-normal hover:bg-slate-800"
               >
-                <Link href="#">
+                <Link href="#">Donate</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="text-lg font-normal sm:flex lg:hidden xl:flex hover:bg-slate-800"
+              >
+                <Link href="https://maps.app.goo.gl/hC4DMMp9orR7a1xw9">
                   Take me to church{" "}
                   <ChevronRightIcon className="ml-2 w-4 h-4" />
                 </Link>
