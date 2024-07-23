@@ -10,10 +10,14 @@ function Menu() {
         <MenuIcon className="w-6 h-6" />
       </Button>
       <nav className="hidden md:flex items-center gap-12">
-        <Link href="#" className="hover:underline text-xl" prefetch={false}>
+        <Link href="/" className="hover:underline text-xl" prefetch={false}>
           Home
         </Link>
-        <Link href="#" className="hover:underline text-xl" prefetch={false}>
+        <Link
+          href="/events"
+          className="hover:underline text-xl"
+          prefetch={false}
+        >
           Events
         </Link>
         <Link href="#" className="hover:underline text-xl" prefetch={false}>

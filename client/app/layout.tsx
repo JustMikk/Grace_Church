@@ -24,10 +24,8 @@ export default function RootLayout({
         <NavBar />
         <div className="pt-[90px]">{children}</div>
         <ContactCard />
-      </body>
-      <footer>
         <Footer />
-      </footer>
+      </body>
     </html>
   );
 }

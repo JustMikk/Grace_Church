@@ -23,7 +23,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="">
-      <section className=" py-12 md:py-24">
+      <section className=" py-12 md:py-24 bg-gradient-to-b from-slate-200 via-background to-black">
         <div className="container mx-auto grid lg:grid-cols-2 gap-32 items-center px-4 sm:px-6">
           <div>
             <h1 className=" text-3xl   xl:text-5xl font-bold mb-4 lg:mb-12 text-white">
@@ -77,7 +77,7 @@ const page = () => {
             subtitle="Check out our upcoming services and events."
           />
           <Button asChild variant="secondary">
-            <Link href="#" className="text-lg">
+            <Link href="/events" className="text-lg">
               See More
             </Link>
           </Button>
