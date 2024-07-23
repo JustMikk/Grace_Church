@@ -9,7 +9,7 @@ const Logo = () => {
         <div>
           <LucideChurch size={38} />
         </div>
-        <div className="font-extrabold text-3xl">Grace Church</div>
+        <div className="font-bold text-2xl">Grace Church</div>
       </div>
     </Link>
   );
