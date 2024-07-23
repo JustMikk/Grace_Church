@@ -13,7 +13,7 @@ const Footer = () => {
         <nav className="flex items-center gap-6">
           <Menu />
         </nav>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           <BsYoutube
             size={28}
             className="text-slate-200 hover:text-slate-500 cursor-pointer"

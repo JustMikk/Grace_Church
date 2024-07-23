@@ -6,7 +6,7 @@ import { BiLocationPlus } from "react-icons/bi";
 
 const ContactCard = () => {
   return (
-    <section className="py-12 md:py-24 bg-black">
+    <section className="py-12 md:py-24 bg-black xl:px-24">
       <div className="container mx-auto flex justify-between items-center mb-8 px-4 sm:px-6">
         <Heading title="Contact Us" subtitle="Get in touch with us" />
       </div>

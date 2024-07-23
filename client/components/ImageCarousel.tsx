@@ -22,7 +22,18 @@ export function ImageCarousel() {
         <CarouselItem className="md:basis-1/2 lg:basis-1/3">
           <div className="p-1">
             <Image
-              src="/assets/images/Hero-section-img.jpg"
+              src="/assets/images/memory.jpg"
+              width={800}
+              height={800}
+              alt="shared memories"
+            />
+          </div>
+        </CarouselItem>
+
+        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <div className="p-1">
+            <Image
+              src="/assets/images/memory3.jpg"
               width={800}
               height={800}
               alt="shared memories"
@@ -32,7 +43,7 @@ export function ImageCarousel() {
         <CarouselItem className="md:basis-1/2 lg:basis-1/3">
           <div className="p-1">
             <Image
-              src="/assets/images/Hero-section-img.jpg"
+              src="/assets/images/memory4.jpg"
               width={800}
               height={800}
               alt="shared memories"
@@ -42,7 +53,7 @@ export function ImageCarousel() {
         <CarouselItem className="md:basis-1/2 lg:basis-1/3">
           <div className="p-1">
             <Image
-              src="/assets/images/Hero-section-img.jpg"
+              src="/assets/images/memory5.jpg"
               width={800}
               height={800}
               alt="shared memories"
@@ -52,17 +63,7 @@ export function ImageCarousel() {
         <CarouselItem className="md:basis-1/2 lg:basis-1/3">
           <div className="p-1">
             <Image
-              src="/assets/images/Hero-section-img.jpg"
-              width={800}
-              height={800}
-              alt="shared memories"
-            />
-          </div>
-        </CarouselItem>
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-          <div className="p-1">
-            <Image
-              src="/assets/images/Hero-section-img.jpg"
+              src="/assets/images/memory6.jpg"
               width={800}
               height={800}
               alt="shared memories"
@@ -70,8 +71,8 @@ export function ImageCarousel() {
           </div>
         </CarouselItem>
       </CarouselContent>
-      <CarouselPrevious className="absolute  left-5 top-1/2 -translate-y-1/2 z-10 cursor-pointer" />
-      <CarouselNext className="absolute right-5 top-1/2 -translate-y-1/2 z-10 cursor-pointer" />
+      <CarouselPrevious className="absolute  left-5 top-1/2 -translate-y-1/2 z-10 cursor-pointer xl:size-12" />
+      <CarouselNext className="absolute right-5 top-1/2 -translate-y-1/2 z-10 cursor-pointer  xl:size-12" />
     </Carousel>
   );
 }
