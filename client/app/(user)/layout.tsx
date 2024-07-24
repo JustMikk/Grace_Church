@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "../globals.css";
 import NavBar from "@/components/navbar/NavBar";
-import { Contact } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 import Footer from "@/components/Footer";
 
