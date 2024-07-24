@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { Button } from "@/components/ui/button";

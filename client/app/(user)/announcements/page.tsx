@@ -1,12 +1,8 @@
 import Heading from "@/components/Heading";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getManyAnnouncements } from "@/data/announcements";
-import { getManyEvents } from "@/data/events";
 import { formatDate } from "@/services/formatDate";
 import { CalendarIcon, ClockIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 type Announcement = {
   name: string;

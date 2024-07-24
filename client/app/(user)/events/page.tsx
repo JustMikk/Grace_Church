@@ -44,7 +44,7 @@ const page = async () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 ">
             {data.map((event: Event) => (
-              <Card>
+              <Card key={event.id}>
                 <CardContent className="relative">
                   <Heading title={event.name} subtitle={event.description} />
                   <div className="flex items-center gap-2 text-muted-foreground">
