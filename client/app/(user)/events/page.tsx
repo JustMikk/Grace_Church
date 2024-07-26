@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getManyEvents } from "@/data/events";
-import { formatDate } from "@/services/formatDate";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,8 +11,8 @@ export type Event = {
   id: number;
   name: string;
   description: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   status: string;
 };
 const page = async () => {
@@ -49,16 +48,10 @@ const page = async () => {
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
                     <span>
-                      {formatDate(event.startDate).date} -{" "}
-                      {formatDate(event.endDate).date}
+                      {event.startDate} - {event.endDate}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground ">
-                    <ClockIcon className="w-4 h-4" />
-                    <span>
-                      {formatDate(event.startDate).time} -{" "}
-                      {formatDate(event.endDate).time}
-                    </span>
                     <Badge
                       className={`absolute right-0 bottom-2 text-black ${
                         event.status === "COMPLETED"

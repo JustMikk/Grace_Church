@@ -5,12 +5,12 @@ import { ColumnDef } from "@tanstack/react-table";
 import React from "react";
 import { MembersProps } from "../../components/MembersCard";
 import PageTitle from "../../components/PageTitle";
-import CreateButton from "../../components/CreateButton";
+import CreateButton from "../../components/CreateMember";
 
 type Props = {};
 
 export default async function page({}: Props) {
-  const members: MembersProps[] = await getManyMembers();
+  const members = await getManyMembers();
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="flex flex-wrap justify-between">
@@ -18,7 +18,7 @@ export default async function page({}: Props) {
         <CreateButton
           title="Add a new member here"
           trigger="Add member"
-          description="Create a new member to join our community"
+          desc="Create a new member to join our community"
         />
       </div>
       <DataTable columns={columns} data={members} />

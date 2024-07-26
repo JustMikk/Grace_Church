@@ -1,13 +1,12 @@
 import Heading from "@/components/Heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { getManyAnnouncements } from "@/data/announcements";
-import { formatDate } from "@/services/formatDate";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import React from "react";
 export type Announcement = {
   name: string;
   description: string;
-  date: Date;
+  date: string;
 };
 
 const page = async () => {
@@ -45,11 +44,11 @@ const page = async () => {
                   />
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
-                    <span>{formatDate(announcement.date).date}</span>
+                    <span>{announcement.date}</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <ClockIcon className="w-4 h-4" />
-                    <span>{formatDate(announcement.date).time}</span>
+                    <span>{announcement.date}</span>
                   </div>
                 </CardContent>
               </Card>

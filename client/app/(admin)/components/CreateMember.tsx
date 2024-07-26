@@ -19,15 +19,15 @@ import { Label } from "@/components/ui/label";
 type Props = {
   title: string;
   trigger: string;
-  description?: string;
+  desc?: string;
   className?: string;
   children?: React.ReactNode;
 };
 
-export default function CreateButton({
+export default function CreateEvent({
   title,
   trigger,
-  description,
+  desc,
   className,
 }: Props) {
   const [firstName, setFirstName] = useState("");
@@ -69,7 +69,7 @@ export default function CreateButton({
       <DialogContent className="bg-white sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
-          <DialogDescription>{description}</DialogDescription>
+          <DialogDescription>{desc}</DialogDescription>
         </DialogHeader>
         <form onSubmit={onSubmit} className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">

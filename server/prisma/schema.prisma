@@ -24,16 +24,16 @@ model Event {
   id          Int         @id @default(autoincrement())
   name        String
   description String
-  startDate   DateTime
-  endDate     DateTime
+  startDate   String
+  endDate     String
   status      EventStatus
 }
 
 model Announcement {
-  id          Int      @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   name        String
   description String
-  date        DateTime
+  date        String
 }
 
 model Donation {
