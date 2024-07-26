@@ -4,7 +4,7 @@ import { getManyAnnouncements } from "@/data/announcements";
 import { formatDate } from "@/services/formatDate";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import React from "react";
-type Announcement = {
+export type Announcement = {
   name: string;
   description: string;
   date: Date;

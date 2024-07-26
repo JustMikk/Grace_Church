@@ -1,4 +1,5 @@
 "use server";
+import { Event } from "@/app/(user)/events/page";
 import fetcher from "./fetcher";
 
 export async function getManyEvents() {
@@ -10,18 +11,18 @@ export async function getManyEvents() {
   }
 }
 
-// export async function createProduct(data) {
-//   try {
-//     const response = await fetcher.post("/products", data); // Ensure correct endpoint and payload
-//     return response.data;
-//   } catch (error) {
-//     console.error(
-//       "Error creating product:",
-//       error.response?.data || error.message
-//     ); // Improved error logging
-//     throw error; // Re-throw the error for further handling
-//   }
-// }
+export async function createEvent(data: Event) {
+  try {
+    const response = await fetcher.post("/events", data); // Ensure correct endpoint and payload
+    return response.data as Event | null;
+  } catch (error: any) {
+    console.error(
+      "Error creating event:",
+      error.response?.data || error.message
+    ); // Improved error logging
+    throw error; // Re-throw the error for further handling
+  }
+}
 
 // export async function updateProduct(id, data) {
 //   try {

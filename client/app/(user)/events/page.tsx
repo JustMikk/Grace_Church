@@ -8,15 +8,14 @@ import { CalendarIcon, ClockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-type Event = {
+export type Event = {
   id: number;
   name: string;
   description: string;
   startDate: Date;
   endDate: Date;
-  status: "UPCOMING" | "ONGOING" | "COMPLETED" | "CANCELLED";
+  status: string;
 };
-
 const page = async () => {
   const data: Event[] = await getManyEvents();
   return (
@@ -44,7 +43,7 @@ const page = async () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 ">
             {data.map((event: Event) => (
-              <Card key={event.id}>
+              <Card>
                 <CardContent className="relative">
                   <Heading title={event.name} subtitle={event.description} />
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -61,8 +60,17 @@ const page = async () => {
                       {formatDate(event.endDate).time}
                     </span>
                     <Badge
-                      variant={event.status}
-                      className="absolute right-0 bottom-2 "
+                      className={`absolute right-0 bottom-2 text-black ${
+                        event.status === "COMPLETED"
+                          ? "bg-green-500"
+                          : event.status === "UPCOMING"
+                          ? "bg-yellow-500"
+                          : event.status === "PAST"
+                          ? "bg-red-500"
+                          : event.status === "CANCELLED"
+                          ? "bg-gray-500"
+                          : "bg-blue-500"
+                      }`}
                     >
                       {event.status}
                     </Badge>
