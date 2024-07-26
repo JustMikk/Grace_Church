@@ -6,7 +6,7 @@ import { getManyMembers } from "@/data/members";
 import Card, { CardContent } from "../components/Card";
 import { Calendar, Users } from "lucide-react";
 import BarChart from "../components/BarChart";
-import MembersCard, { SalesProps } from "../components/MembersCard";
+import MembersCard, { MembersProps } from "../components/MembersCard";
 
 const page = async () => {
   const events = await getManyEvents();
@@ -52,7 +52,7 @@ const page = async () => {
             {" "}
             Beloved members of our community
           </p>
-          {members.map((member: SalesProps, index: number) => (
+          {members.slice(0, 5).map((member: MembersProps, index: number) => (
             <MembersCard
               key={index}
               firstName={member.firstName}

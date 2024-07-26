@@ -1,13 +1,13 @@
 import React from "react";
 
-export type SalesProps = {
+export type MembersProps = {
   firstName: string;
   lastName: string;
   email: string;
   phoneNumber: string;
 };
 
-export default function MembersCard(props: SalesProps) {
+export default function MembersCard(props: MembersProps) {
   return (
     <div className="flex flex-wrap justify-between gap-3">
       <section className="flex justify-between gap-3">
