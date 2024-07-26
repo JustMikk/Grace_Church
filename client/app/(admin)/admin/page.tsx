@@ -5,6 +5,8 @@ import { getManyAnnouncements } from "@/data/announcements";
 import { getManyMembers } from "@/data/members";
 import Card, { CardContent } from "../components/Card";
 import { Calendar, Users } from "lucide-react";
+import BarChart from "../components/BarChart";
+import MembersCard, { SalesProps } from "../components/MembersCard";
 
 const page = async () => {
   const events = await getManyEvents();
@@ -42,6 +44,23 @@ const page = async () => {
       <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
         <CardContent>
           <p className="p-4 font-semibold">Overview</p>
+          <BarChart />
+        </CardContent>
+        <CardContent className="flex justify-between gap-4">
+          <p className="p-4 font-semibold">Recently Added Members</p>
+          <p className="text-sm text-gray-400">
+            {" "}
+            Beloved members of our community
+          </p>
+          {members.map((member: SalesProps, index: number) => (
+            <MembersCard
+              key={index}
+              firstName={member.firstName}
+              lastName={member.lastName}
+              email={member.email}
+              phoneNumber={member.phoneNumber}
+            />
+          ))}
         </CardContent>
       </section>
     </div>
