@@ -14,10 +14,12 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   ClockIcon,
+  MoveRightIcon,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BiRightArrow, BiSolidRightArrow } from "react-icons/bi";
 
 const page = () => {
   return (
@@ -47,7 +49,7 @@ const page = () => {
                 size="lg"
                 className="text-lg font-normal hover:bg-slate-800"
               >
-                <Link href="#">Donate</Link>
+                <Link href="/about">About Us</Link>
               </Button>
               <Button
                 asChild
@@ -80,8 +82,12 @@ const page = () => {
             subtitle="Check out our upcoming services and events."
           />
           <Button asChild variant="secondary">
-            <Link href="/events" className="text-lg">
-              See More
+            <Link
+              href="/events"
+              className="text-lg bg-transparent text-white border border-white"
+            >
+              <div className="hidden sm:block">See More </div>
+              <MoveRightIcon className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </div>
@@ -153,8 +159,12 @@ const page = () => {
             subtitle="Check out our latest announcements."
           />
           <Button asChild variant="secondary">
-            <Link href="#" className="text-lg">
-              See More
+            <Link
+              href="/announcements"
+              className="text-lg bg-transparent text-white border border-white"
+            >
+              <div className="hidden sm:block">See More </div>
+              <MoveRightIcon className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </div>

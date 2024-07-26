@@ -8,6 +8,8 @@ import {
   ChevronLeft,
   ChevronRight,
   LayoutDashboard,
+  User2Icon,
+  UserCircleIcon,
   UserRound,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -60,6 +62,12 @@ export default function SideBar({}: Props) {
             icon: BellIcon,
             variant: "ghost",
             href: "/admin/announcements",
+          },
+          {
+            title: "Users site",
+            icon: UserCircleIcon,
+            variant: "ghost",
+            href: "/",
           },
         ]}
       />

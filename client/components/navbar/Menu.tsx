@@ -20,9 +20,7 @@ function Menu() {
         <Link href="/" className="hover:underline text-xl" prefetch={false}>
           Home
         </Link>
-        <Link href="#" className="hover:underline text-xl" prefetch={false}>
-          Donate
-        </Link>
+
         <Link
           href="/events"
           className="hover:underline text-xl"
@@ -37,8 +35,19 @@ function Menu() {
         >
           Announcements
         </Link>
-        <Link href="#" className="hover:underline text-xl" prefetch={false}>
+        <Link
+          href="/about"
+          className="hover:underline text-xl"
+          prefetch={false}
+        >
           About
+        </Link>
+        <Link
+          href="/admin"
+          className="hover:underline text-xl"
+          prefetch={false}
+        >
+          Admin
         </Link>
       </nav>
 

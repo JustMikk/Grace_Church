@@ -3,6 +3,7 @@ import Heading from "./Heading";
 import { Card, CardContent } from "./ui/card";
 import { MailIcon, PhoneIcon } from "lucide-react";
 import { BiLocationPlus } from "react-icons/bi";
+import Link from "next/link";
 
 const ContactCard = () => {
   return (
@@ -32,14 +33,16 @@ const ContactCard = () => {
           </CardContent>
         </Card>
         <Card>
-          <CardContent>
-            <h3 className="text-xl font-bold mb-2">Adress</h3>
-            <p className="text-white mb-4">Come see us at</p>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <BiLocationPlus className="w-4 h-4" />
-              <span>123 Main St, Anytown USA</span>
-            </div>
-          </CardContent>
+          <Link href="https://maps.app.goo.gl/hC4DMMp9orR7a1xw9">
+            <CardContent>
+              <h3 className="text-xl font-bold mb-2">Adress</h3>
+              <p className="text-white mb-4">Come see us at</p>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <BiLocationPlus className="w-4 h-4" />
+                <span>123 Main St, Anytown USA</span>
+              </div>
+            </CardContent>
+          </Link>
         </Card>
       </div>
     </section>
