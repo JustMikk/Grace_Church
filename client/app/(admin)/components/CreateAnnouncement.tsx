@@ -49,32 +49,29 @@ export default function CreateAnnouncement({
 }: Props) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [startDate, setStartDate] = useState<Date>();
-  const [endDate, setEndDate] = useState<Date>();
-  const [status, setStatus] = useState("");
+  const [date, setDate] = useState<Date>();
 
-  const onSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+  const onSubmit = async (announcement: React.FormEvent) => {
+    announcement.preventDefault();
 
     const data = {
       name,
       description,
-      startDate,
-      endDate,
-      status,
+      date,
     };
 
     try {
-      const response = await axios.post("http://localhost:8000/events", data);
-      toast.success("Event created successfully");
+      const response = await axios.post(
+        "http://localhost:8000/announcements",
+        data
+      );
+      toast.success("Announcement created successfully");
       // Optionally reset the form fields
       setName("");
       setDescription("");
-      setStartDate(undefined);
-      setEndDate(undefined);
-      setStatus("");
+      setDate(undefined);
     } catch (error) {
-      toast.error("Error creating Event");
+      toast.error("Error creating Announcement");
     }
   };
 
@@ -94,7 +91,7 @@ export default function CreateAnnouncement({
         <form onSubmit={onSubmit} className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
-              Event Name
+              Name
             </Label>
             <Input
               id="name"
@@ -116,7 +113,7 @@ export default function CreateAnnouncement({
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="description" className="text-right">
-              Start Date
+              Date
             </Label>
             <Popover>
               <PopoverTrigger asChild>
@@ -124,76 +121,28 @@ export default function CreateAnnouncement({
                   variant={"outline"}
                   className={cn(
                     "w-[280px] justify-start text-left font-normal bg-white border-slate-400 border-[1px]",
-                    !startDate && "text-black"
+                    !date && "text-black"
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {startDate ? (
-                    format(startDate, "PPP")
+                  {date ? (
+                    format(date, "PPP")
                   ) : (
-                    <span>Pick a start date</span>
+                    <span>Pick a date for announcement</span>
                   )}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0">
                 <Calendar
                   mode="single"
-                  selected={startDate}
-                  onSelect={setStartDate}
+                  selected={date}
+                  onSelect={setDate}
                   initialFocus
                 />
               </PopoverContent>
             </Popover>
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="description" className="text-right">
-              Ending Date
-            </Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "w-[280px] justify-start text-left font-normal  bg-white border-slate-400 border-[1px]",
-                    !endDate && "text-black"
-                  )}
-                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {endDate ? (
-                    format(endDate, "PPP")
-                  ) : (
-                    <span>Pick an end date</span>
-                  )}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
-                <Calendar
-                  mode="single"
-                  selected={endDate}
-                  onSelect={setEndDate}
-                  initialFocus
-                />
-              </PopoverContent>
-            </Popover>
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="status" className="text-right">
-              Status
-            </Label>
-            <Select onValueChange={(value) => setStatus(value)}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select a status" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="UPCOMING">Upcoming</SelectItem>
-                  <SelectItem value="ONGOING">Ongoing</SelectItem>
-                  <SelectItem value="PAST">Past</SelectItem>
-                  <SelectItem value="CANCELLED">Cancelled</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
+
           <DialogFooter>
             <Button type="submit">Create</Button>
           </DialogFooter>
