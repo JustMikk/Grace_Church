@@ -61,9 +61,9 @@ export default function CreateEvent({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>
+        <Button className="rounded-full sm:rounded-lg">
           <Plus className="w-5 h-5" />
-          {trigger}
+          <div className="hidden sm:block">{trigger}</div>
         </Button>
       </DialogTrigger>
       <DialogContent className="bg-white sm:max-w-[425px]">
