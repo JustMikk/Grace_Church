@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
 import SideBar from "./components/SideBar";
+import { Toaster } from "react-hot-toast";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -28,7 +29,10 @@ export default function AdminLayout({
         )}
       >
         <SideBar />
-        <div className="p-8 w-full">{children}</div>
+        <div className="p-8 w-full">
+          <Toaster />
+          {children}
+        </div>
       </body>
     </html>
   );
