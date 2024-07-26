@@ -20,7 +20,7 @@ export default function SideBar({}: Props) {
   const onlyWidth = useWindowWidth();
   const mobilewidth = onlyWidth < 768;
   return (
-    <div className="relative min-w-[80px] border-r pl-3 pr-9 lg:px-3 pb-10 pt-24">
+    <div className="relative min-w-[80px] border-r pl-3 pr-9 xl:px-3 pb-10 pt-24">
       {!mobilewidth && (
         <div className="absolute right-[-20px] top-7">
           <Button
