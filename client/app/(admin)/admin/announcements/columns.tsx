@@ -1,5 +1,6 @@
 "use client";
-import { Event } from "@/app/(user)/events/page";
+import { Announcement } from "@/app/(user)/announcements/page";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,12 +8,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { deleteEvent } from "@/data/events";
+import { deleteAnnouncement } from "@/data/announcements";
 import { ColumnDef } from "@tanstack/react-table";
 import { Delete, Edit, MoreHorizontal } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-export const columns: ColumnDef<Event>[] = [
+export const columns: ColumnDef<Announcement>[] = [
   {
     accessorKey: "name",
     header: "Event Name",
@@ -22,22 +22,14 @@ export const columns: ColumnDef<Event>[] = [
     header: "Description",
   },
   {
-    accessorKey: "startDate",
-    header: "Starting Date",
-  },
-  {
-    accessorKey: "endDate",
-    header: "Ending Date",
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "date",
+    header: "Date",
   },
   {
     id: "actions",
     header: "Actions",
     cell: ({ row }) => {
-      const event = row.original;
+      const announcement = row.original;
 
       return (
         <DropdownMenu>
@@ -54,7 +46,7 @@ export const columns: ColumnDef<Event>[] = [
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              onClick={() => handleDelete(event)}
+              onClick={() => handleDelete(announcement)}
               className="flex items-center text-red-600"
             >
               <Delete className="mr-2" />
@@ -67,7 +59,7 @@ export const columns: ColumnDef<Event>[] = [
   },
 ];
 
-const handleDelete = (event: Event) => {
-  const eventId = Number(event.id);
-  deleteEvent(eventId);
+const handleDelete = (announcement: Announcement) => {
+  const announcementId = Number(announcement.id);
+  deleteAnnouncement(announcementId);
 };

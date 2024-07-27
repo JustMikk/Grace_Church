@@ -24,6 +24,19 @@ export async function createEvent(data: Event) {
   }
 }
 
+export async function deleteEvent(id: number) {
+  try {
+    const response = await fetcher.delete(`/events/${id}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error(
+      "Error deleting event:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+}
 // export async function updateProduct(id, data) {
 //   try {
 //     const response = await fetcher.put(`/products/${id}`, data);
@@ -49,17 +62,3 @@ export async function createEvent(data: Event) {
 //     throw error; // Re-throw the error for further handling
 //   }
 // }
-
-export async function deleteEvent(id: number) {
-  try {
-    const response = await fetcher.delete(`/events/${id}`);
-    console.log(response.data);
-    return response.data;
-  } catch (error: any) {
-    console.error(
-      "Error deleting event:",
-      error.response?.data || error.message
-    );
-    throw error;
-  }
-}

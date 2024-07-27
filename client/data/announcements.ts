@@ -9,3 +9,17 @@ export async function getManyAnnouncements() {
     return { error };
   }
 }
+
+export async function deleteAnnouncement(id: number) {
+  try {
+    const response = await fetcher.delete(`/announcements/${id}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error(
+      "Error deleting announcement:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+}

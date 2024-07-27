@@ -5,6 +5,7 @@ import React from "react";
 import { MembersProps } from "../../components/MembersCard";
 import PageTitle from "../../components/PageTitle";
 import { getManyAnnouncements } from "@/data/announcements";
+import { columns } from "./columns";
 
 type Props = {};
 
@@ -24,18 +25,3 @@ export default async function page({}: Props) {
     </div>
   );
 }
-
-export const columns: ColumnDef<MembersProps>[] = [
-  {
-    accessorKey: "name",
-    header: "Event Name",
-  },
-  {
-    accessorKey: "description",
-    header: "Description",
-  },
-  {
-    accessorKey: "date",
-    header: "Date",
-  },
-];

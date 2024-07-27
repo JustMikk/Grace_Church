@@ -4,6 +4,7 @@ import { getManyAnnouncements } from "@/data/announcements";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import React from "react";
 export type Announcement = {
+  id: number;
   name: string;
   description: string;
   date: string;
@@ -44,10 +45,6 @@ const page = async () => {
                   />
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
-                    <span>{announcement.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <ClockIcon className="w-4 h-4" />
                     <span>{announcement.date}</span>
                   </div>
                 </CardContent>

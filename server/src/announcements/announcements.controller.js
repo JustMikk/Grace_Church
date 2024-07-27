@@ -10,6 +10,7 @@ import {
 import { validationPipe } from "../common/validation.pipe.js";
 import { createAnnouncementSchema } from "./announcements.schema.js";
 import e from "cors";
+import { parse } from "date-fns";
 
 const announcementsController = express.Router();
 
@@ -55,7 +56,8 @@ announcementsController.delete(
   "/:id",
   asyncHandler(async (req, res) => {
     const { id } = req.params;
-    const announcement = await deleteAnnouncement(id);
+    const announcementId = parseInt(id, 10);
+    const announcement = await deleteAnnouncement(announcementId);
     return res.json(announcement);
   })
 );
