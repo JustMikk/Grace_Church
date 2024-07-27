@@ -1,6 +1,7 @@
 import React from "react";
 
 export type MembersProps = {
+  id: number;
   firstName: string;
   lastName: string;
   email: string;

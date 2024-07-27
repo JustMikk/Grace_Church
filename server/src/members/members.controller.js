@@ -56,7 +56,8 @@ membersController.delete(
   "/:id",
   asyncHandler(async (req, res) => {
     const { id } = req.params;
-    const member = await deleteMember(id);
+    const memberId = parseInt(id, 10);
+    const member = await deleteMember(memberId);
     return res.json(member);
   })
 );

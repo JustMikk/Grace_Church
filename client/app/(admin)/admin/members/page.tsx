@@ -1,11 +1,21 @@
 import { DataTable } from "@/components/DataTable";
-import { getManyMembers } from "@/data/members";
+import { deleteMember, getManyMembers } from "@/data/members";
 import { ColumnDef } from "@tanstack/react-table";
 
 import React from "react";
 import { MembersProps } from "../../components/MembersCard";
 import PageTitle from "../../components/PageTitle";
 import CreateButton from "../../components/CreateMember";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Delete, Edit, MoreHorizontal } from "lucide-react";
+import { columns } from "../../components/columns";
 
 type Props = {};
 
@@ -25,22 +35,3 @@ export default async function page({}: Props) {
     </div>
   );
 }
-
-export const columns: ColumnDef<MembersProps>[] = [
-  {
-    accessorKey: "firstName",
-    header: "First Name",
-  },
-  {
-    accessorKey: "lastName",
-    header: "Last Name",
-  },
-  {
-    accessorKey: "email",
-    header: "Email",
-  },
-  {
-    accessorKey: "phoneNumber",
-    header: "Phone Number",
-  },
-];
