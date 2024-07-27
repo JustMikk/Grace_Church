@@ -55,7 +55,8 @@ eventsController.delete(
   "/:id",
   asyncHandler(async (req, res) => {
     const { id } = req.params;
-    const event = await deleteEvent(id);
+    const eventId = parseInt(id, 10);
+    const event = await deleteEvent(eventId);
     return res.json(event);
   })
 );

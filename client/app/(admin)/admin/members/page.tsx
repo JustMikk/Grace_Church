@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Delete, Edit, MoreHorizontal } from "lucide-react";
-import { columns } from "../../components/columns";
+import { columns } from "./columns";
 
 type Props = {};
 

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ColumnDef } from "@tanstack/react-table";
 import { Delete, Edit, MoreHorizontal } from "lucide-react";
-import { MembersProps } from "./MembersCard";
+import { MembersProps } from "../../components/MembersCard";
 import { deleteMember } from "@/data/members";
 
 export const columns: ColumnDef<MembersProps>[] = [

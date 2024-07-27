@@ -8,6 +8,7 @@ import PageTitle from "../../components/PageTitle";
 import CreateButton from "../../components/CreateMember";
 import { getManyEvents } from "@/data/events";
 import CreateEvent from "../../components/CreateEvent";
+import { columns } from "./columns";
 
 type Props = {};
 
@@ -27,26 +28,3 @@ export default async function page({}: Props) {
     </div>
   );
 }
-
-export const columns: ColumnDef<MembersProps>[] = [
-  {
-    accessorKey: "name",
-    header: "Event Name",
-  },
-  {
-    accessorKey: "description",
-    header: "Description",
-  },
-  {
-    accessorKey: "startDate",
-    header: "Starting Date",
-  },
-  {
-    accessorKey: "endDate",
-    header: "Ending Date",
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-  },
-];

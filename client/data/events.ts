@@ -50,16 +50,16 @@ export async function createEvent(data: Event) {
 //   }
 // }
 
-// export async function deleteProduct(id) {
-//   try {
-//     const response = await fetcher.delete(`/products/${id}`);
-//     console.log(response.data);
-//     return response.data;
-//   } catch (error) {
-//     console.error(
-//       "Error deleting product:",
-//       error.response?.data || error.message
-//     );
-//     throw error;
-//   }
-// }
+export async function deleteEvent(id: number) {
+  try {
+    const response = await fetcher.delete(`/events/${id}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error(
+      "Error deleting event:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+}
