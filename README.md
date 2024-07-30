@@ -28,3 +28,20 @@ Welcome to the Grace Church website repository. This project is a web applicatio
    git clone https://github.com/JustMikk/grace-church-website.git
    cd grace-church-website
    ```
+2.  **Set up the client:**
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+3.  **Set up the server:**
+
+**Open a new terminal window and navigate to the server directory:**
+
+```bash
+cd grace-church-website/server
+npm install
+npm run dev
+```
