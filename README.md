@@ -19,7 +19,7 @@ Welcome to the Grace Church website repository. This project is a web applicatio
   </tr>
   <tr>
     <td>
-      <img src="./screenshot/readme-image(7).jpeg" alt="Announcements Screenshot" width="300"/>
+      <img src="./screenshot/readme-image (7).jpeg" alt="Announcements Screenshot" width="300"/>
       <p align="center">Announcements</p>
     </td>
     <td>
