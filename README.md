@@ -9,41 +9,41 @@ Welcome to the Grace Church website repository. This project is a web applicatio
 <table>
   <tr>
     <td>
-      <img src="</screenshot/readme-image%20(9).jpeg>" alt="Homepage Screenshot" width="300"/>
+      <img src="</screenshot/readme-image(9).jpeg>" alt="Homepage Screenshot" width="300"/>
       <p align="center">Home</p>
     </td>
     <td>
-      <img src="</screenshot/readme-image%20(8).jpeg>" alt="Events Screenshot" width="300"/>
+      <img src="</screenshot/readme-image(8).jpeg>" alt="Events Screenshot" width="300"/>
       <p align="center">Events</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="</screenshot/readme-image%20(7).jpeg>" alt="Announcements Screenshot" width="300"/>
+      <img src="</screenshot/readme-image(7).jpeg>" alt="Announcements Screenshot" width="300"/>
       <p align="center">Announcements</p>
     </td>
     <td>
-      <img src="</screenshot/readme-image%20(5).jpeg>" alt="About Us Screenshot" width="300"/>
+      <img src="</screenshot/readme-image(5).jpeg>" alt="About Us Screenshot" width="300"/>
       <p align="center">About Us</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="<./screenshot/readme-image%20(4).jpeg>" alt="Dashboard Screenshot" width="300"/>
+      <img src="<./screenshot/readme-image(4).jpeg>" alt="Dashboard Screenshot" width="300"/>
       <p align="center">Dashboard</p>
     </td>
     <td>
-      <img src="<./screenshot/readme-image%20(3).jpeg>" alt="Members Screenshot" width="300"/>
+      <img src="<./screenshot/readme-image(3).jpeg>" alt="Members Screenshot" width="300"/>
       <p align="center">Members</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="<./screenshot/readme-image%20(2).jpeg>" alt="Add Member Screenshot" width="300"/>
+      <img src="<./screenshot/readme-image(2).jpeg>" alt="Add Member Screenshot" width="300"/>
       <p align="center">Add Member</p>
     </td>
     <td>
-      <img src="<./screenshot/readme-image%20(1).jpeg>" alt="Add Event Screenshot" width="300"/>
+      <img src="<./screenshot/readme-image(1).jpeg>" alt="Add Event Screenshot" width="300"/>
       <p align="center">Add Event</p>
     </td>
   </tr>
