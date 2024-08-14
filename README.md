@@ -9,7 +9,7 @@ Welcome to the Grace Church website repository. This project is a web applicatio
 <table>
   <tr>
     <td>
-      <img src="/screenshot/readme-image(9).jpeg" alt="Homepage Screenshot" width="300"/>
+      <img src="screenshot/readme-image(9).jpeg" alt="Homepage Screenshot" width="300"/>
       <p align="center">Home</p>
     </td>
     <td>
