@@ -6,35 +6,35 @@ Welcome to the Grace Church website repository. This project is a web applicatio
 
 ### Home
 
-![Homepage Screenshot](</screenshot/readme-image%20(9).png>)
+![Homepage Screenshot](</screenshot/readme-image%20(9).jpeg>)
 
 ### Events
 
-![Portfolio Screenshot](</screenshot/readme-image%20(8).png>)
+![Portfolio Screenshot](</screenshot/readme-image%20(8).jpeg>)
 
 ### Announcements
 
-![Portfolio Screenshot](</screenshot/readme-image%20(7).png>)
+![Portfolio Screenshot](</screenshot/readme-image%20(7).jpeg>)
 
 ### About Us
 
-![Resume Screenshot](</screenshot/readme-image%20(5).png>)
+![Resume Screenshot](</screenshot/readme-image%20(5).jpeg>)
 
 ### Dashboard
 
-![Contact Screenshot](<./screenshot/readme-image%20(4).png>)
+![Contact Screenshot](<./screenshot/readme-image%20(4).jpeg>)
 
 ### Members
 
-![Contact Screenshot](<./screenshot/readme-image%20(3).png>)
+![Contact Screenshot](<./screenshot/readme-image%20(3).jpeg>)
 
 ### Add Member
 
-![Contact Screenshot](<./screenshot/readme-image%20(2).png>)
+![Contact Screenshot](<./screenshot/readme-image%20(2).jpeg>)
 
 ### Add Event
 
-![Contact Screenshot](<./screenshot/readme-image%20(1).png>)
+![Contact Screenshot](<./screenshot/readme-image%20(1).jpeg>)
 
 ## Features
 
