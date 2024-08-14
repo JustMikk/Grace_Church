@@ -33,7 +33,7 @@ Welcome to the Grace Church website repository. This project is a web applicatio
       <p align="center">Dashboard</p>
     </td>
     <td>
-      <img src="screenshot/readme-image (3).jpeg>" alt="Members Screenshot" width="500"/>
+      <img src="./screenshot/readme-image (3).jpeg" alt="Members Screenshot" width="500"/>
       <p align="center">Members</p>
     </td>
   </tr>
